@@ -9,7 +9,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(position => {
-      return fetch('https://amiinberlin.vapor.cloud/' + position.coords.latitude + '/' + position.coords.longitude)
+      return fetch('https://aiib.vapor.cloud/' + position.coords.latitude + '/' + position.coords.longitude)
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
